@@ -49,19 +49,24 @@ public class ClaseHilos extends Thread {
 //                Logger.getLogger(ClaseHilos.class.getName()).log(Level.SEVERE, null, ex);
 //            }
 //        }
-//
         //1C
-        //ACCEDIENDO A UN MÉTODO QUE TIENE UN FOR DENTRO:
-        //m.mostrarHilo(getName());
-        //
         //ACCEDIENDO MÚLTIPLES VECES A ESE MÉTODO:
         //(recibe como parámetro el índice del for para poder imprimirlo )
         for (int i = 1; i <= 8; i++) {
 
-            m.mostrarHilo(getName(), i);
+            System.out.println(i + ". " + getName());
+
+            //si no ponemos un sleep, el yield no funcionará correctamente???
+            //no funciona?
+            try {
+                sleep(2000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ClaseHilos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            yield();
 
         }
-
     }
 
 }
