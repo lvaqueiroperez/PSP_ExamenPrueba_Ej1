@@ -46,13 +46,12 @@ public class ClaseHilos extends Thread {
             System.out.println(i + ". " + getName());
 
             //si no ponemos un sleep, el yield no funcionará correctamente???
-            //no funciona?
+            //no funciona?          
             try {
                 sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ClaseHilos.class.getName()).log(Level.SEVERE, null, ex);
             }
-
             yield();
 
         }
