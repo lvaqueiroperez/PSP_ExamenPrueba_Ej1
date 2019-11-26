@@ -34,6 +34,7 @@ public class PSP_PruebaEx_1 {
         h1.start();
         h2.start();
         h3.start();
+        System.out.println("ACABA EL PROGRAMA PRINCIPAL");
     }
 
 }
