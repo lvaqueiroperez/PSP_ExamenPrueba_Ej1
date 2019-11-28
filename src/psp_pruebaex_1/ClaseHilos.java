@@ -41,12 +41,13 @@ public class ClaseHilos extends Thread {
         //1C
         //ACCEDIENDO MÚLTIPLES VECES A ESE MÉTODO:
         //(recibe como parámetro el índice del for para poder imprimirlo )
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= 8; i++) {
 
             System.out.println(i + ". " + getName());
 
             //si no ponemos un sleep, el yield no funcionará correctamente???
             //no funciona?          
+            //en el pc de casa no funciona, en el de clase sí
             try {
                 sleep(1000);
             } catch (InterruptedException ex) {
